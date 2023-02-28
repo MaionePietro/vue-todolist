@@ -22,10 +22,14 @@ const { createApp } = Vue
         },
         methods: {
             addTask() {
-                
+                const newTask = this.inputValue
             },
-            removeTask() {
-                
+            removeTask(indice) {
+                console.log(this.mytask.splice(indice))
             },
+            decoration(){
+                
+            }
+
         },
       }).mount('#app')
