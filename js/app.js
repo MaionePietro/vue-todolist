@@ -25,10 +25,16 @@ const { createApp } = Vue
                 const newTask = this.inputValue
             },
             removeTask(indice) {
-                console.log(this.mytask.splice(indice))
+                console.log(this.mytask[indice])
+                this.mytask.splice(indice)
             },
-            decoration(){
-                
+            decoration(index){
+                console.log(this.mytask[index].verifica)
+                if(this.mytask[index].verifica === true ){
+                  this.mytask[index].verifica = false
+                }else{
+                  this.mytask[index].verifica = true
+                }
             }
 
         },
